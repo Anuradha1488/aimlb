@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+class Address {
+    public String street;
+    public String city;
+    public int pincode;
+    public String country;
+
+    public void displayAddress() {
+        System.out.println("Street: " + street);
+        System.out.println("City: " + city);
+        System.out.println("Pincode: " + pincode);
+        System.out.println("Country: " + country);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter Customer Address");
+        System.out.println("Enter the street");
+        String street = scanner.nextLine();
+
+        System.out.println("Enter the city");
+        String city = scanner.nextLine();
+
+        System.out.println("Enter the pincode");
+        int pincode = scanner.nextInt();
+        scanner.nextLine(); // consume newline character
+
+        System.out.println("Enter the country");
+        String country = scanner.nextLine();
+
+        Address address = new Address();
+        address.street = street;
+        address.city = city;
+        address.pincode = pincode;
+        address.country = country;
+
+        address.displayAddress();
+
+        scanner.close();
+    }
+}

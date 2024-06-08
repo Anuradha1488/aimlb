@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+class Country {
+    public String name;
+    public String countryCode;
+    public String isdCode;
+
+    public Country(String name, String countryCode, String isdCode) {
+        this.name = name;
+        this.countryCode = countryCode;
+        this.isdCode = isdCode;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCountryCode() {
+        return countryCode;
+    }
+
+    public void setCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+    }
+
+    public String getIsdCode() {
+        return isdCode;
+    }
+
+    public void setIsdCode(String isdCode) {
+        this.isdCode = isdCode;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the country name");
+        String name = scanner.nextLine();
+
+        System.out.println("Enter the country code");
+        String countryCode = scanner.nextLine();
+
+        System.out.println("Enter the isd code");
+        String isdCode = scanner.nextLine();
+
+        Country country = new Country(name, countryCode, isdCode);
+
+        System.out.println("Country Name : " + country.getName());
+        System.out.println("Country Code : " + country.getCountryCode());
+        System.out.println("ISD Code : " + country.getIsdCode() + " in java");
+
+        scanner.close();
+    }
+}

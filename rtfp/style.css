@@ -1,0 +1,55 @@
+body {
+    font-family: 'Cascadia Code', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
+    gap: 2px;
+    margin-bottom: 20px;
+}
+
+#sudoku-board input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px solid black;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:nth-child(1) {
+    background-color: #FC0324;
+    color: white;
+}
+
+button:nth-child(2) {
+    background-color: #FC0324;
+    color: white;
+}
+
+button:nth-child(3) {
+    background-color: #94FC03;
+    color: black;
+}
